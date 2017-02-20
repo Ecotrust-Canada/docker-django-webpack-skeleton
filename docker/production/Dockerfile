@@ -1,9 +1,9 @@
-FROM debian:stable
+FROM python:3.5
 
 ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get install -y nodejs nginx-extras python-pip uwsgi-plugin-python git libpq-dev python-dev libxml2-dev libxslt1-dev vim graphviz
 
 RUN mkdir /app/
