@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 # workaround for this: https://github.com/npm/npm/issues/9863
 RUN rm -rf /usr/local/lib/node_modules/npm \
